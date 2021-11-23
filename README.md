@@ -49,7 +49,7 @@ class Example extends Component {
 | Props | Type | Default | Required | Description |
 |:-----:|:----:|:-------:|:--------:|:-----------:|
 | **bodyList** | 2D array | N/A | Yes | This is the data you want to display, usually it's data you fetch from database|
-| **headList** | any | N/A| Yes | Labels to display in table head |
+| **headList** | 1D array | N/A| Yes | Labels to display in table head |
 | imageHeight| Integer| `null`| No | Set the image height if in your data there is images to display (image path) |
 | imageWidth| Integer| `null`| No | Set the image width if in your data there is images to display (image path) |
 | rowNumber | Boolean | `false` | No | If set to `true` an extra column will be added to the table to display row number |
