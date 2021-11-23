@@ -20,11 +20,19 @@ npm install --save react-dynamic-bs-table
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-dynamic-bs-table'
+import CustomTable from 'react-dynamic-bs-table'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <CustomTable
+              bodyList={dataToDisplay}
+              headList={headLabels}
+              imageHeight={75}
+              rowNumber
+              enablePagination
+              itemsPerPage={5}
+              tableHover
+    />
   }
 }
 ```
