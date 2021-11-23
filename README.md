@@ -17,7 +17,7 @@ npm install --save react-dynamic-bs-table
 
 ## Usage
 
-```jsx
+```javascript
 import React, { Component } from 'react'
 
 import CustomTable from 'react-dynamic-bs-table'
@@ -38,6 +38,22 @@ class Example extends Component {
   }
 }
 ```
+## Properties
+| Props | Type | Default | Required | Description |
+|:-----:|:----:|:-------:|:--------:|:-----------:|
+| **bodyList** | 2D array | N/A | Yes | This is the data you want to display, usually it's data you fetch from database|
+| **headList** | any | N/A| Yes | Labels to display in table head |
+| imageHeight| Integer| `null`| No | Set the image height if in your data there is images to display (image path) |
+| imageHeight| Integer| `null`| No | Set the image width if in your data there is images to display (image path) |
+| rowNumber | Boolean | `false` | No | If set to `true` an extra column will be added to the table to display row number |
+| enablePagination | Boolean | `false` | No | If set to `true` the pagination will be enabled |
+| itemsPerPage | Integer | `10` | No | Number of items to display by page on the table |
+| tableHover | Boolean | `false` | No | This apply `table-hover` bootstrap class |
+| tableBkColor | String | N/A | No | This apply a background color to the talbe. Available values (`info` `danger` `warning` `success`) |
+| tableBordered | Boolean | `false` | No | This apply `table-bordered` bootstrap class |
+| tableStriped | Boolean | `false` | No | This apply `table-striped` bootstrap class |
+| tableResponsive | Boolean | `false` | No | This apply `table-responsive` bootstrap class |
+| tableInverse | Boolean | `false` | No | This apply `table-inverse` bootstrap class |
 
 ## License
 
