@@ -24,7 +24,8 @@ import CustomTable from 'react-dynamic-bs-table'
 
 class Example extends Component {
   render() {
-    return <CustomTable
+    return (
+            <CustomTable
               bodyList={dataToDisplay}
               headList={headLabels}
               imageHeight={75}
@@ -32,7 +33,8 @@ class Example extends Component {
               enablePagination
               itemsPerPage={5}
               tableHover
-    />
+              />
+          )
   }
 }
 ```
