@@ -24,7 +24,7 @@ npm install --save react-dynamic-bs-table
 
 ## Usage
 
-```javascript
+```jsx
 import React, { Component } from 'react'
 
 import CustomTable from 'react-dynamic-bs-table'
@@ -61,6 +61,10 @@ class Example extends Component {
 | tableStriped | Boolean | `false` | No | This apply `table-striped` bootstrap class |
 | tableResponsive | Boolean | `false` | No | This apply `table-responsive` bootstrap class |
 | tableInverse | Boolean | `false` | No | This apply `table-inverse` bootstrap class |
+
+## Changelog
+
+- 1.00: First Release
 
 ## License
 
