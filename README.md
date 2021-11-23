@@ -9,6 +9,13 @@ It is possible to enable or disable the pagination, by specifying it in props, n
 
 [![NPM](https://img.shields.io/npm/v/react-dynamic-bs-table.svg)](https://www.npmjs.com/package/react-dynamic-bs-table) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Features
+
+- [Install](#install)
+- [Usage](#usage)
+- [Properties](#properties)
+- [License](#license)
+
 ## Install
 
 ```bash
@@ -44,12 +51,12 @@ class Example extends Component {
 | **bodyList** | 2D array | N/A | Yes | This is the data you want to display, usually it's data you fetch from database|
 | **headList** | any | N/A| Yes | Labels to display in table head |
 | imageHeight| Integer| `null`| No | Set the image height if in your data there is images to display (image path) |
-| imageHeight| Integer| `null`| No | Set the image width if in your data there is images to display (image path) |
+| imageWidth| Integer| `null`| No | Set the image width if in your data there is images to display (image path) |
 | rowNumber | Boolean | `false` | No | If set to `true` an extra column will be added to the table to display row number |
 | enablePagination | Boolean | `false` | No | If set to `true` the pagination will be enabled |
-| itemsPerPage | Integer | `10` | No | Number of items to display by page on the table |
+| itemsPerPage | Integer | `10` | No | Number of items to be displayed per page on the table |
 | tableHover | Boolean | `false` | No | This apply `table-hover` bootstrap class |
-| tableBkColor | String | N/A | No | This apply a background color to the talbe. Available values (`info` `danger` `warning` `success`) |
+| tableBkColor | String | N/A | No | This apply a background color to the talbe. Available values (`info`, `danger`, `warning`, `success`) |
 | tableBordered | Boolean | `false` | No | This apply `table-bordered` bootstrap class |
 | tableStriped | Boolean | `false` | No | This apply `table-striped` bootstrap class |
 | tableResponsive | Boolean | `false` | No | This apply `table-responsive` bootstrap class |
