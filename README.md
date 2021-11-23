@@ -64,7 +64,7 @@ class Example extends Component {
 
 ## Changelog
 
-- 1.00: First Release
+- 1.0.0: First Release
 
 ## License
 
