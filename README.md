@@ -73,7 +73,7 @@ class Example extends Component {
 | tableStriped | Boolean | `false` | No | This applies `table-striped` bootstrap class |
 | tableResponsive | Boolean | `false` | No | This applies `table-responsive` bootstrap class |
 | tableInverse | Boolean | `false` | No | This applies `table-inverse` bootstrap class |
-| customClass | Object | N/D | No | This applies the classes you provide in this prop. `customClass` is an object that expects two keys, `tableClass` and `trClass`, wich values are simply strings that refer to the class names of the css library you are using, example value: `{{tableClass:"table table-hover",trClass:"text-center p-0"}}` |
+| customClass | Object | N/D | No | This applies the classes you provide in this prop. `customClass` is an object that expects three keys, `tableClass`, `trClass` and `theadClass`, wich values are simply strings that refer to the class names of the css library you are using, example value: `{{tableClass:"table table-hover",trClass:"text-center p-0",theadClass:"text-primary"}}` |
 
 ## Changelog
 
