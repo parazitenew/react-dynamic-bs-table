@@ -17,6 +17,7 @@ It is possible to enable or disable the pagination, by specifying it in props, n
 - [Install](#install)
 - [Usage](#usage)
 - [Properties](#properties)
+- [Changelog](#changelog)
 - [License](#license)
 
 ## Install
