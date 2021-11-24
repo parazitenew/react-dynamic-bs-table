@@ -32,6 +32,7 @@ npm install --save react-dynamic-bs-table
 import React, { Component } from 'react'
 
 import CustomTable from 'react-dynamic-bs-table'
+import 'react-dynamic-bs-table/dist/index.css'
 
 class Example extends Component {
   render() {
