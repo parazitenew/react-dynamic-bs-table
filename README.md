@@ -74,7 +74,7 @@ class Example extends Component {
 | customClass | Object | N/D | No | This applies the classes you provide in this prop. `customClass` is an object that expects tow keys, `tableClass` and `trClass`, wich values are simply strings that refers to the class names of the css library you use, example value: `{{tableClass:"table table-hover",trClass:"text-center p-0"}}` |
 
 ## Changelog
-#### 1.0.2:
+#### 1.1.0:
 - Added `customClass` prop
 - Added `PropTypes`
 - Changed named export for the component to default export
