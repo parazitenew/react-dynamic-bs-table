@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { CustomTable } from 'react-dynamic-bs-table'
+import CustomTable from 'react-dynamic-bs-table'
 import 'react-dynamic-bs-table/dist/index.css'
+
 const headList = [
-  "Brand", "Model", "Country"
+  "Brand", "Model", "Country", 'Picture'
 ]
 const brandsList = [
   { brandName: "Ford", ModelName: "Fusion", country: "USA", imagePath: "https://tdrresearch.azureedge.net/photos/chrome/Expanded/White/2018FOC270001/2018FOC27000101.jpg" },
@@ -30,6 +31,7 @@ const App = () => {
         rowNumber
         enablePagination
         itemsPerPage={5}
+        customClass={{ tableClass: "", trClass: "" }}
       />
     </div>
   )

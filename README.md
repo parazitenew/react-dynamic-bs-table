@@ -1,6 +1,6 @@
 # react-dynamic-bs-table
 
-> Dynamic reusable table with pagination and image support for react, using Bootstrap styling 
+> Dynamic reusable table with pagination and image support for react, using Bootstrap default styling 
 
 The purpose of this package is to propose a dynamic table React component, in fact, simply add table header labels and data to display as props, the component will take care to display all data whatever is the number of array's keys. It also support images.
 
@@ -40,6 +40,13 @@ class Example extends Component {
               enablePagination
               itemsPerPage={5}
               tableHover
+
+              //this is just an example, you have to specify the class names
+              //of your css library you are using (bootsrap, material...)
+              customClass={{
+                tableClass:"table table-hover",
+                trClass:"text-center",
+              }}
               />
           )
   }
@@ -55,16 +62,25 @@ class Example extends Component {
 | rowNumber | Boolean | `false` | No | If set to `true` an extra column will be added to the table to display row number |
 | enablePagination | Boolean | `false` | No | If set to `true` the pagination will be enabled |
 | itemsPerPage | Integer | `10` | No | Number of items to be displayed per page on the table |
-| tableHover | Boolean | `false` | No | This apply `table-hover` bootstrap class |
-| tableBkColor | String | N/A | No | This apply a background color to the talbe. Available values (`info`, `danger`, `warning`, `success`) |
-| tableBordered | Boolean | `false` | No | This apply `table-bordered` bootstrap class |
-| tableStriped | Boolean | `false` | No | This apply `table-striped` bootstrap class |
-| tableResponsive | Boolean | `false` | No | This apply `table-responsive` bootstrap class |
-| tableInverse | Boolean | `false` | No | This apply `table-inverse` bootstrap class |
+| tableHover | Boolean | `false` | No | This applies `table-hover` bootstrap class |
+| tableBkColor | String | N/A | No | This applies a background color to the talbe. Available values (`info`, `danger`, `warning`, `success`) |
+| tableBordered | Boolean | `false` | No | This applies `table-bordered` bootstrap class |
+| tableStriped | Boolean | `false` | No | This applies `table-striped` bootstrap class |
+| tableResponsive | Boolean | `false` | No | This applies `table-responsive` bootstrap class |
+| tableInverse | Boolean | `false` | No | This applies `table-inverse` bootstrap class |
+| customClass | Object | N/D | No | This applies the classes you provide in this prop. `customClass` is an object that expects tow keys, `tableClass` and `trClass`, wich values are simply strings that refers to the class names of the css library you use, example value: `{{tableClass:"table table-hover",trClass:"text-center p-0"}}` |
 
 ## Changelog
-
-- 1.0.0: First Release
+#### 1.0.2:
+- Added `customClass` prop
+- Added `PropTypes`
+- Changed named export for the component to default export
+- Some corrections to README.md
+- Added typing definitions for the package
+#### 1.0.1: 
+- Update README.md
+#### 1.0.0: 
+- First Release of my first library in history
 
 ## License
 

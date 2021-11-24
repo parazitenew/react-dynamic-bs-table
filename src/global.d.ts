@@ -1,0 +1,1 @@
+declare module 'react-dynamic-bs-table';

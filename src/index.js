@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import styles from './styles.module.css'
 
-export class CustomTable extends React.Component {
+class CustomTable extends React.Component {
   constructor(props) {
     super(props);
     this.bodyList = this.props.bodyList
@@ -10,6 +11,23 @@ export class CustomTable extends React.Component {
     this.state = {
       currentPage: 1,
     }
+  }
+
+  static propTypes = {
+    headList: PropTypes.array,
+    bodyList: PropTypes.array,
+    imageHeight: PropTypes.number,
+    imageWidth: PropTypes.number,
+    itemsPerPage: PropTypes.number,
+    rowNumber: PropTypes.number,
+    rowNumber: PropTypes.bool,
+    tableHover: PropTypes.bool,
+    tableBordered: PropTypes.bool,
+    tableStriped: PropTypes.bool,
+    tableResponsive: PropTypes.bool,
+    tableInverse: PropTypes.bool,
+    tableBkColor: PropTypes.string,
+    customClass: PropTypes.object,
   }
   componentDidUpdate() {
     if (this.bodyList.length !== this.props.bodyList.length) {
@@ -29,7 +47,7 @@ export class CustomTable extends React.Component {
     }
   }
   render() {
-    let { headList, bodyList, imageHeight, imageWidth, itemsPerPage, rowNumber, enablePagination, tableHover, tableBkColor, tableBordered, tableStriped, tableResponsive, tableInverse } = this.props
+    let { headList, bodyList, imageHeight, imageWidth, itemsPerPage, rowNumber, enablePagination, tableHover, tableBkColor, tableBordered, tableStriped, tableResponsive, tableInverse, customClass } = this.props
 
     imageWidth = imageWidth === undefined ? null : imageWidth
     imageHeight = imageHeight === undefined ? null : imageHeight
@@ -72,11 +90,22 @@ export class CustomTable extends React.Component {
       default:
         break;
     }
+    //Custom styling handler
+    let trClass = ""
+    if (customClass !== undefined && typeof customClass === 'object' && customClass !== "") {
+      //Check if table classes are provided
+      if (customClass.tableClass !== undefined && customClass.tableClass !== "") {
+        tableClassNames = customClass.tableClass
+      }
+      if (customClass.trClass !== undefined && customClass.trClass !== "") {
+        trClass = customClass.trClass
+      }
+    }
     return (
       <div>
         <table className={tableClassNames}>
           <thead>
-            <tr>
+            <tr className={trClass}>
               {rowNumber && <th>#</th>}
               {
                 headList.map((value, index) => {
@@ -91,7 +120,7 @@ export class CustomTable extends React.Component {
             {bodyList.slice(startingRow, endingRow).map((value, index) => {
               let keys = Object.keys(value)
               return (
-                <tr key={index}>
+                <tr key={index} className={trClass}>
                   {
                     //Displays row number
                     rowNumber &&
@@ -130,3 +159,4 @@ export class CustomTable extends React.Component {
     );
   }
 }
+export default CustomTable
