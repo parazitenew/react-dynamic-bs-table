@@ -76,6 +76,10 @@ class Example extends Component {
 | customClass | Object | N/D | No | This applies the classes you provide in this prop. `customClass` is an object that expects two keys, `tableClass` and `trClass`, wich values are simply strings that refer to the class names of the css library you are using, example value: `{{tableClass:"table table-hover",trClass:"text-center p-0"}}` |
 
 ## Changelog
+
+#### 1.2.0:
+- Added `theadClass` property for `customClass` prop
+
 #### 1.1.0:
 - Added `customClass` prop
 - Added `PropTypes`
