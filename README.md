@@ -67,12 +67,12 @@ class Example extends Component {
 | enablePagination | Boolean | `false` | No | If set to `true` the pagination will be enabled |
 | itemsPerPage | Integer | `10` | No | Number of items to be displayed per page on the table |
 | tableHover | Boolean | `false` | No | This applies `table-hover` bootstrap class |
-| tableBkColor | String | N/A | No | This applies a background color to the talbe. Available values (`info`, `danger`, `warning`, `success`) |
+| tableBkColor | String | N/A | No | This applies a background color to the table. Available values (`info`, `danger`, `warning`, `success`) |
 | tableBordered | Boolean | `false` | No | This applies `table-bordered` bootstrap class |
 | tableStriped | Boolean | `false` | No | This applies `table-striped` bootstrap class |
 | tableResponsive | Boolean | `false` | No | This applies `table-responsive` bootstrap class |
 | tableInverse | Boolean | `false` | No | This applies `table-inverse` bootstrap class |
-| customClass | Object | N/D | No | This applies the classes you provide in this prop. `customClass` is an object that expects tow keys, `tableClass` and `trClass`, wich values are simply strings that refers to the class names of the css library you use, example value: `{{tableClass:"table table-hover",trClass:"text-center p-0"}}` |
+| customClass | Object | N/D | No | This applies the classes you provide in this prop. `customClass` is an object that expects two keys, `tableClass` and `trClass`, wich values are simply strings that refer to the class names of the css library you are using, example value: `{{tableClass:"table table-hover",trClass:"text-center p-0"}}` |
 
 ## Changelog
 #### 1.1.0:
