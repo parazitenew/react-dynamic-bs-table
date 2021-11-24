@@ -31,7 +31,7 @@ const App = () => {
         rowNumber
         enablePagination
         itemsPerPage={5}
-        customClass={{ tableClass: "", trClass: "" }}
+        customClass={{ tableClass: "", trClass: "", theadClass: "" }}
       />
     </div>
   )

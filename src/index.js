@@ -92,6 +92,7 @@ class CustomTable extends React.Component {
     }
     //Custom styling handler
     let trClass = ""
+    let theadClass = ""
     if (customClass !== undefined && typeof customClass === 'object' && customClass !== "") {
       //Check if table classes are provided
       if (customClass.tableClass !== undefined && customClass.tableClass !== "") {
@@ -100,11 +101,14 @@ class CustomTable extends React.Component {
       if (customClass.trClass !== undefined && customClass.trClass !== "") {
         trClass = customClass.trClass
       }
+      if (customClass.theadClass !== undefined && customClass.theadClass !== "") {
+        theadClass = customClass.theadClass
+      }
     }
     return (
       <div>
         <table className={tableClassNames}>
-          <thead>
+          <thead className={theadClass}>
             <tr className={trClass}>
               {rowNumber && <th>#</th>}
               {
