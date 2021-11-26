@@ -1,6 +1,6 @@
 {
   "name": "react-dynamic-bs-table",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Dynamic reusable table component, with pagination feature, image support, custom classes and live search bar, for React",
   "author": "parazitenew",
   "license": "MIT",
