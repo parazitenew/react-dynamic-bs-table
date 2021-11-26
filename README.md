@@ -127,6 +127,9 @@ class Example extends Component {
 
 ## Changelog
 
+#### 1.3.2
+- README.md updated
+
 #### 1.3.1
 - README.md updated
 
