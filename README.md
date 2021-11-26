@@ -127,6 +127,9 @@ class Example extends Component {
 
 ## Changelog
 
+#### 1.3.1
+- - README.md updated
+
 #### 1.3.0
 - Added a live search bar feature
 - Added `enableSearchBar`, `searchBarPlaceholder`, `searchBarClass` props for the live search bar
