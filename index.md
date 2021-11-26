@@ -123,9 +123,12 @@ class Example extends Component {
 | searchBarClass | String | N/D | No | Custom class you want to apply for the search bar. You can use your own classes ou some other CSS libraries you use |
 
 ## Live Example
-[See live example here!](https://parazitenew.github.io/react-dynamic-bs-table/example/build/)
+[See live example here!](https://parazitenew.github.io/react-dynamic-bs-table/example)
 
 ## Changelog
+
+#### 1.3.2
+- Updated Live Example URL
 
 #### 1.3.1
 - README.md updated
