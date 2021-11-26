@@ -16,7 +16,7 @@ It is possible to enable or disable the pagination and the search bar, by specif
 - [Usage](#usage)
 - [Live Search Bar](#live-search-bar)
 - [Properties](#properties)
-- [Example](#example)
+- [Example](#live-example)
 - [Changelog](#changelog)
 - [License](#license)
 
@@ -122,7 +122,7 @@ class Example extends Component {
 | searchBarPlaceholder | String | `Search for...` | No | Placeholder of the live search bar |
 | searchBarClass | String | N/D | No | Custom class you want to apply for the search bar. You can use your own classes ou some other CSS libraries you use |
 
-## Example
+## Live Example
 [See live example here!](https://parazitenew.github.io/react-dynamic-bs-table/example/build/)
 
 ## Changelog
