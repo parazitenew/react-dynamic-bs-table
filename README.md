@@ -128,7 +128,7 @@ class Example extends Component {
 ## Changelog
 
 #### 1.3.1
-- - README.md updated
+- README.md updated
 
 #### 1.3.0
 - Added a live search bar feature
