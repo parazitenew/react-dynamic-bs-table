@@ -5,55 +5,72 @@ import styles from './styles.module.css'
 class CustomTable extends React.Component {
   constructor(props) {
     super(props);
-    this.bodyList = this.props.bodyList
     this.numberOfPages = null
-
     this.state = {
       currentPage: 1,
+      bodyList: [], //Initial data sent from parent
+      bodyListFiltered: [],//Filtred data with searchbar
     }
   }
-
+  //Define prop types
   static propTypes = {
     headList: PropTypes.array,
     bodyList: PropTypes.array,
     imageHeight: PropTypes.number,
     imageWidth: PropTypes.number,
     itemsPerPage: PropTypes.number,
-    rowNumber: PropTypes.number,
     rowNumber: PropTypes.bool,
+    enablePagination: PropTypes.bool,
     tableHover: PropTypes.bool,
+    tableBkColor: PropTypes.string,
     tableBordered: PropTypes.bool,
     tableStriped: PropTypes.bool,
     tableResponsive: PropTypes.bool,
     tableInverse: PropTypes.bool,
-    tableBkColor: PropTypes.string,
     customClass: PropTypes.object,
+    enableSearchBar: PropTypes.bool,
+    searchBarPlaceholder: PropTypes.string,
+    searchBarClass: PropTypes.string,
   }
+  //Listen when the data fetched is updated in parent component
   componentDidUpdate() {
-    if (this.bodyList.length !== this.props.bodyList.length) {
-      this.bodyList = this.props.bodyList
-      this.forceUpdate()
+    //Check if data is updated (only length for now)
+    if (this.state.bodyList.length !== this.props.bodyList.length) {
+      this.setState({ bodyList: this.props.bodyList, bodyListFiltered: this.props.bodyList })
     }
   }
 
+  //Handle next page button
   nextPage() {
     if (this.state.currentPage < this.numberOfPages) {
       this.setState({ currentPage: this.state.currentPage + 1 })
     }
   }
+  //Handle previous page button
   previousPage() {
     if (this.state.currentPage > 1) {
       this.setState({ currentPage: this.state.currentPage - 1 })
     }
   }
+  //Handle live search bar
+  searchFor(event) {
+    let bodyListFiltered = this.state.bodyList.filter(row => {
+      const keys = Object.keys(row)
+      return keys.some(key => row[key].toLowerCase().indexOf(event.target.value) != -1)
+    });
+    this.setState({ bodyListFiltered: bodyListFiltered, currentPage: 1 })
+  }
   render() {
-    let { headList, bodyList, imageHeight, imageWidth, itemsPerPage, rowNumber, enablePagination, tableHover, tableBkColor, tableBordered, tableStriped, tableResponsive, tableInverse, customClass } = this.props
-
+    let { headList, imageHeight, imageWidth, itemsPerPage, rowNumber, enablePagination, tableHover, tableBkColor, tableBordered, tableStriped, tableResponsive, tableInverse, customClass, enableSearchBar, searchBarPlaceholder, searchBarClass } = this.props
+    let bodyList = this.state.bodyListFiltered
     imageWidth = imageWidth === undefined ? null : imageWidth
     imageHeight = imageHeight === undefined ? null : imageHeight
     itemsPerPage = itemsPerPage === undefined ? 10 : itemsPerPage
     rowNumber = rowNumber === undefined ? false : rowNumber
     enablePagination = enablePagination === undefined ? false : enablePagination
+    enableSearchBar = enableSearchBar === undefined ? false : enableSearchBar
+    searchBarPlaceholder = searchBarPlaceholder === undefined ? 'Search for...' : searchBarPlaceholder
+    searchBarClass = searchBarClass === undefined ? styles.searchbar : searchBarClass
     let numberOfPages = Math.ceil(bodyList.length / itemsPerPage)
     this.numberOfPages = numberOfPages
 
@@ -107,6 +124,11 @@ class CustomTable extends React.Component {
     }
     return (
       <div>
+        {
+          enableSearchBar &&
+          <input type="text" className={searchBarClass} placeholder={searchBarPlaceholder} onChange={(event) => this.searchFor(event)} />
+        }
+
         <table className={tableClassNames}>
           <thead className={theadClass}>
             <tr className={trClass}>
@@ -128,7 +150,7 @@ class CustomTable extends React.Component {
                   {
                     //Displays row number
                     rowNumber &&
-                    <td>{(index + ((this.state.currentPage - 1) * itemsPerPage)) + 1}</td>
+                    <th>{(index + ((this.state.currentPage - 1) * itemsPerPage)) + 1}</th>
                   }
 
                   {keys.map((element, index) => {
@@ -137,7 +159,7 @@ class CustomTable extends React.Component {
                     //Check if the data is an image path, if it is, we display img tag inside the td tag
                     if (lastElem === "jpg" || lastElem === "png" || lastElem === "jpeg" || lastElem === "gif") {
                       return (
-                        < td key={index} ><img alt="logo" src={value[element]} style={{ height: imageHeight, width: imageWidth }}></img></td>
+                        < td key={index} ><img alt="image" src={value[element]} style={{ height: imageHeight, width: imageWidth }}></img></td>
                       )
                     } else {
                       return (
