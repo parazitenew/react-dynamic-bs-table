@@ -7,17 +7,8 @@ The purpose of this package is to propose a dynamic table React component, in fa
 It is possible to enable or disable the pagination and the search bar, by specifying it in props, number of items per page to display, custom table classes, and more...
 
 
-[![NPM](https://img.shields.io/npm/v/react-dynamic-bs-table.svg)](https://www.npmjs.com/package/react-dynamic-bs-table) 
-
-[![NPM](https://img.shields.io/npm/dw/react-dynamic-bs-table.svg)](https://www.npmjs.com/package/react-dynamic-bs-table) 
-
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
- 
-[![JavaScript Style Guide](https://img.shields.io/github/stars/parazitenew/react-dynamic-bs-table.svg)](https://github.com/parazitenew/react-dynamic-bs-table)
- 
-[![JavaScript Style Guide](https://img.shields.io/github/issues/parazitenew/react-dynamic-bs-table.svg)](https://github.com/parazitenew/react-dynamic-bs-table)
-
-[![NPM](https://img.shields.io/npm/types/react-dynamic-bs-table.svg)](https://www.npmjs.com/package/react-dynamic-bs-table) 
+[![NPM](https://img.shields.io/npm/v/react-dynamic-bs-table.svg)](https://www.npmjs.com/package/react-dynamic-bs-table) [![NPM](https://img.shields.io/npm/dw/react-dynamic-bs-table.svg)](https://www.npmjs.com/package/react-dynamic-bs-table) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![JavaScript Style Guide](https://img.shields.io/github/stars/parazitenew/react-dynamic-bs-table.svg)](https://github.com/parazitenew/react-dynamic-bs-table)
+[![JavaScript Style Guide](https://img.shields.io/github/issues/parazitenew/react-dynamic-bs-table.svg)](https://github.com/parazitenew/react-dynamic-bs-table) [![NPM](https://img.shields.io/npm/types/react-dynamic-bs-table.svg)](https://www.npmjs.com/package/react-dynamic-bs-table) 
  
 ## Features
 
