@@ -15,6 +15,7 @@ It is possible to enable or disable the pagination and the search bar, by specif
 - [Install](#install)
 - [Usage](#usage)
 - [Live Search Bar](#live-search-bar)
+- [Passing a custom element](#custom-element)
 - [Properties](#properties)
 - [Example](#live-example)
 - [Changelog](#changelog)
@@ -101,6 +102,30 @@ class Example extends Component {
   }
 }
 ```
+
+## Passing a custom element
+You can pass a custom element (it can be a react component, JSX code, or a text) to the table by using the `CustomTable` as a wrapper.
+
+### Example
+```jsx
+...
+
+class Example extends Component {
+  ...
+  handleButtonClick() {
+    alert('Nice!')
+  }
+  render() {
+    return (
+            <CustomTable
+              ...
+            >
+                <button className="btn btn-primary" onClick={this.handleButtonClick}>Click me!</button>
+            </CustomTable>
+          )
+  }
+}
+```
 ## Properties
 | Props | Type | Default | Required | Description |
 |:-----:|:----:|:-------:|:--------:|:-----------:|
@@ -126,6 +151,9 @@ class Example extends Component {
 [See live example here!](https://parazitenew.github.io/react-dynamic-bs-table/example)
 
 ## Changelog
+
+#### 1.4.0
+- Added custom element feature support
 
 #### 1.3.2
 - Updated Live Example URL
