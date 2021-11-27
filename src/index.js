@@ -132,13 +132,20 @@ class CustomTable extends React.Component {
         <table className={tableClassNames}>
           <thead className={theadClass}>
             <tr className={trClass}>
-              {rowNumber && <th>#</th>}
               {
+                rowNumber && <th>#</th>//Show row number if set to true
+              }
+              {
+                //Populate table head labels
                 headList.map((value, index) => {
                   return (
                     <th key={index}>{value}</th>
                   )
                 })
+              }
+              {
+                this.props.children !== undefined &&
+                <th></th>
               }
             </tr>
           </thead>
@@ -166,7 +173,12 @@ class CustomTable extends React.Component {
                         <td key={index}>{value[element]}</td>
                       )
                     }
-                  })}
+                  })
+                  }
+                  {
+                    this.props.children !== undefined &&
+                    <td>{this.props.children}</td>
+                  }
                 </tr>)
             })}
           </tbody>

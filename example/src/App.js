@@ -32,12 +32,15 @@ class App extends React.Component {
   simulateDataUpdate() {
     this.setState({ brandsList: this.state.brandsList.slice(0, 4) })
   }
+  handleButtonClick() {
+    alert('Nice!')
+  }
   componentDidMount() {
     this.setState({ brandsList: brandsList })
   }
   render() {
     return (
-      <div style={{ width: 600, marginLeft: 200, marginTop: 100, padding: 5, borderColor: 'grey', borderWidth: 1, borderStyle: 'solid', borderRadius: 10 }}>
+      <div >
         <button onClick={() => this.simulateDataUpdate()}>SIMULATE DATA UPDATE</button>
         <CustomTable
           bodyList={this.state.brandsList}
@@ -50,7 +53,7 @@ class App extends React.Component {
           enableSearchBar
           tableHover
           searchBarPlaceholder="Search..."
-        />
+        ><button className="btn btn-primary" onClick={this.handleButtonClick}>Click me!</button></CustomTable>
       </div>
     )
   }
